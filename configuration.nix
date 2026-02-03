@@ -5,8 +5,12 @@
 { config, lib, pkgs, ... }:
 
 let
-  home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz;
+  home-manager = builtins.fetchTarball {
+    url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+    sha256 = "1m6p4v10w9crsvwigqr08y7pc5xjw6iyd1fn39pvsl99gczp4gc2";
+  };
 in
+
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -27,6 +31,9 @@ in
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
+
+  # Flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Set your time zone.
   time.timeZone = "Africa/Cairo";

@@ -8,8 +8,8 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      nixconfig = "sudo hx /etc/nixos/configuration.nix";
-      homeconfig = "sudo hx /etc/nixos/home.nix";
+      nixconfig = "sudo hx /home/mark/nixos-dotfiles/configuration.nix";
+      homeconfig = "sudo hx /home/mark/nixos-dotfiles/home.nix";
       nrs = "sudo nixos-rebuild switch";
     };
 
