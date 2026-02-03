@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    helium.url = "github:FKouhai/helium2nix/main";
   };
 
   outputs = { self, nixpkgs }: {

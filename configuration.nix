@@ -137,7 +137,7 @@ in
     # ungoogled-chromium
     qutebrowser
     peaclock
-    nyxt
+    inputs.helium.defaultPackage.${system}
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
