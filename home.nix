@@ -8,7 +8,7 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      nixoconfig = "sudo hx /etc/nixos/configuration.nix";
+      nixconfig = "sudo hx /etc/nixos/configuration.nix";
       homeconfig = "sudo hx /etc/nixos/home.nix";
       nrs = "sudo nixos-rebuild switch";
     };
@@ -30,6 +30,13 @@
       font.size = 14;
     };
   };
+  home.file.".config/bat/config".text = ''
+    --theme="Nord"
+    --style="numbers,changes,grid"
+    --paging=auto
+  '';
+
+  home.file.".config/qtile".source = /home/mark/nixos-dotfiles/qtile;
 
   home.packages = with pkgs; [
     bat

@@ -130,6 +130,7 @@ in
     # ungoogled-chromium
     qutebrowser
     peaclock
+    nyxt
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
