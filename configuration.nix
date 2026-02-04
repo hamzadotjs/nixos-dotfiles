@@ -108,7 +108,7 @@
     wget
     alacritty
     keepassxc
-    floorp-bin
+    # floorp-bin
     btop
     # zsh
     fzf

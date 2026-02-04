@@ -14,7 +14,7 @@
     };
 
     initExtra = ''
-      export PS1="\u@\h \[\033[38;2;67;163;40m\]\w\[\033[0m\] $ "
+      export PS1='\[\e[0;32m\]\u@\h:\w\$ \[\e[m\]'
       neofetch
     '';
   };
