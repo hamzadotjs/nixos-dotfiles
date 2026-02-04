@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, system,  ... }:
 
 let
   home-manager = builtins.fetchTarball {
@@ -137,7 +137,10 @@ in
     # ungoogled-chromium
     qutebrowser
     peaclock
-    inputs.helium.defaultPackage.${system}
+    # (import inputs.helium { inherit system; })
+    # inputs.helium.defaultPackage.${system}
+    # inputs.helium.defaultPackage.${system}  # ← EXACTLY RIGHT
+    (inputs.helium.defaultPackage.${pkgs.system})
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
