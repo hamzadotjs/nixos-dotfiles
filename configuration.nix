@@ -1,10 +1,7 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
-<<<<<<< HEAD
 # [https://search.nixos.org/options](https://search.nixos.org/options) and in the NixOS manual (`nixos-help`).
-=======
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
->>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
 
 { config, lib, pkgs, inputs, system,  ... }:
 
@@ -61,20 +58,12 @@
     backend = "glx";
     fade = true;
   };
-<<<<<<< HEAD
-
-=======
      
->>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
   fonts = {
     packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
     fontDir.enable = true;
   };
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us,ar";
@@ -114,21 +103,15 @@
   # programs.firefox.enable = true;
 
   # List packages installed in system profile.
-<<<<<<< HEAD
   # You can use [https://search.nixos.org/](https://search.nixos.org/) to find more packages (and options).
-=======
   # You can use https://search.nixos.org/ to find more packages (and options).
->>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
   environment.systemPackages = with pkgs; [
     evil-helix # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     alacritty
     keepassxc
-<<<<<<< HEAD
-    floorp-bin
-=======
     # floorp-bin
->>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
+    # floorp-bin
     btop
     # zsh
     fzf
@@ -144,16 +127,13 @@
     # ungoogled-chromium
     qutebrowser
     peaclock
-<<<<<<< HEAD
     (inputs.helium.defaultPackage.${pkgs.system})
     gh
     ayugram-desktop
-=======
     # (import inputs.helium { inherit system; })
     # inputs.helium.defaultPackage.${system}
     # inputs.helium.defaultPackage.${system}  # ← EXACTLY RIGHT
     (inputs.helium.defaultPackage.${pkgs.system})
->>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -187,11 +167,8 @@
   # even if you've upgraded your system to a new NixOS release.
   #
   # This value does NOT affect the Nixpkgs version your packages and OS are pulled from,
-<<<<<<< HEAD
   # so changing it will NOT upgrade your system - see [https://nixos.org/manual/nixos/stable/#sec-upgrading](https://nixos.org/manual/nixos/stable/#sec-upgrading) for how
-=======
   # so changing it will NOT upgrade your system - see https://nixos.org/manual/nixos/stable/#sec-upgrading for how
->>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
   # to actually do that.
   #
   # This value being lower than the current NixOS release does NOT mean your system is
@@ -200,15 +177,8 @@
   # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
   # and migrated your data accordingly.
   #
-<<<<<<< HEAD
   # For more information, see `man configuration.nix` or [https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion](https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion) .
   system.stateVersion = "25.11"; # Did you read the comment?
 
 }
-=======
-  # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "25.11"; # Did you read the comment?
 
-}
-
->>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
