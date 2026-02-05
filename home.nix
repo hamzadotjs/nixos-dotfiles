@@ -5,6 +5,7 @@
   home.homeDirectory = "/home/mark";
   home.stateVersion = "25.11";
 
+<<<<<<< HEAD
   # HELIUM PROTECTION (.keep files)
   home.file = {
     ".config/helium/.keep".text = "";
@@ -24,6 +25,18 @@
     };
     initExtra = ''
       PS1='\[\e[0;32m\]\u@\h:\w\$ \[\e[m\]'
+=======
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      nixconfig = "sudo hx /home/mark/nixos-dotfiles/configuration.nix";
+      homeconfig = "sudo hx /home/mark/nixos-dotfiles/home.nix";
+      nrs = "sudo nixos-rebuild switch";
+    };
+
+    initExtra = ''
+      export PS1='\[\e[0;32m\]\u@\h:\w\$ \[\e[m\]'
+>>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
       neofetch
     '';
   };
@@ -39,6 +52,7 @@
       font.size = 14;
     };
   };
+<<<<<<< HEAD
 
   home.file = {
     ".config/bat/config".text = ''
@@ -52,5 +66,18 @@
   home.packages = with pkgs; [
      bat
    ];
+=======
+  home.file.".config/bat/config".text = ''
+    --theme="Nord"
+    --style="numbers,changes,grid"
+    --paging=auto
+  '';
+
+  home.file.".config/qtile".source = /home/mark/nixos-dotfiles/qtile;
+
+  home.packages = with pkgs; [
+    bat
+  ];
+>>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
 }
 
