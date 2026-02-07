@@ -43,11 +43,8 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-<<<<<<< HEAD
     Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
-=======
     Key([mod], "r", lazy.layout.next(), desc="Move window focus to other window"),
->>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
@@ -83,20 +80,17 @@ keys = [
     ),
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
-<<<<<<< HEAD
     Key([mod, "shift"], "q", lazy.shutdown(), desc="exit Qtile"),
     Key([mod], "space", lazy.spawn("rofi -show drun"), desc="Spawn a command using a prompt widget"),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
     Key([], "XF86AudioMute",        lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
-=======
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "space", lazy.spawn("rofi -show drun"), desc="Spawn a command using a prompt widget"),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
     Key([], "Caps_Lock", lazy.spawn("setxkbmap -layout us,ar -option grp:caps_toggle")),
->>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -156,13 +150,8 @@ layouts = [
 ]
 
 widget_defaults = dict(
-<<<<<<< HEAD
     font="Jetbrains Mono Nerd Font",
     fontsize=14,
-=======
-    font="JetBrainsMono Nerd Font Mono",
-    fontsize=13,
->>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
@@ -176,7 +165,6 @@ screens = [
                 widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowName(),
-<<<<<<< HEAD
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
@@ -184,11 +172,6 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.TextBox("Hamooz's config", name="default"),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
-                widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-=======
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
@@ -268,8 +251,4 @@ wl_xcursor_size = 24
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
-<<<<<<< HEAD
 wmname = "Qtile"
-=======
-wmname = "LG3D"
->>>>>>> 0e6559e83bc0591212f7ed466e578fd6bce09d33

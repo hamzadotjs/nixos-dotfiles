@@ -11,7 +11,9 @@
     ".local/share/helium/.keep".text = "";
     ".local/state/helium/.keep".text = "";
     ".cache/helium/.keep".text = "";
+    ".mozilla/glide/.keep".text = "";
   };
+
 
   programs.bash = {
     enable = true;
@@ -21,10 +23,6 @@
       flakeconfig = "sudo hx ~/nixos-dotfiles/flake.nix";
       nrs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos-btw --impure";
       list = "ls -la --color";
-    };
-    initExtra = ''
-      PS1='\[\e[0;32m\]\u@\h:\w\$ \[\e[m\]'
-      neofetch
     };
 
     initExtra = ''
@@ -45,28 +43,10 @@
     };
   };
 
-  home.file = {
-    ".config/bat/config".text = ''
-      --theme="Nord"
-      --style="numbers,changes,grid"
-      --paging=auto
-    '';
-    ".config/qtile".source = ./qtile;
-  };
-
-  home.packages = with pkgs; [
+   home.packages = with pkgs; [
      bat
    ];
-  home.file.".config/bat/config".text = ''
-    --theme="Nord"
-    --style="numbers,changes,grid"
-    --paging=auto
-  '';
 
   home.file.".config/qtile".source = /home/mark/nixos-dotfiles/qtile;
-
-  home.packages = with pkgs; [
-    bat
-  ];
+  home.file.".config/neofetch".source = /home/mark/nixos-dotfiles/neofetch;
 }
-

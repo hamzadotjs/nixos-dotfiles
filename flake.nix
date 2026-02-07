@@ -6,6 +6,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    glide.url = "github:glide-browser/glide.nix";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {

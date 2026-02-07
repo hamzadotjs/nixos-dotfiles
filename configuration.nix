@@ -84,7 +84,7 @@
   services.blueman.enable = true;  # GUI manager, clutch for pairing
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
-
+  nixpkgs.config.allowUnfree = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.mark = {
     isNormalUser = true;
@@ -101,7 +101,15 @@
   xdg.portal.config.common.default = "*";
   services.flatpak.enable = true;
   # programs.firefox.enable = true;
-
+  # nixpkgs.overlays = [
+  #    (self: super: (let
+  #        nixpkgs-glide = import inputs.nixpkgs-glide {
+  #        inherit (self) system;
+  #      };
+  #    in {
+  #        glide-browser = nixpkgs-glide.glide-browser;
+  #      }))
+  #];
   # List packages installed in system profile.
   # You can use [https://search.nixos.org/](https://search.nixos.org/) to find more packages (and options).
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -125,15 +133,14 @@
     figlet
     neo-cowsay
     # ungoogled-chromium
-    qutebrowser
+    # qutebrowser
     peaclock
-    (inputs.helium.defaultPackage.${pkgs.system})
     gh
     ayugram-desktop
-    # (import inputs.helium { inherit system; })
-    # inputs.helium.defaultPackage.${system}
-    # inputs.helium.defaultPackage.${system}  # ← EXACTLY RIGHT
     (inputs.helium.defaultPackage.${pkgs.system})
+    # (inputs.glide.defaultPackage.${pkgs.system})
+    inputs.glide.packages.${pkgs.system}.default
+    steam
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
