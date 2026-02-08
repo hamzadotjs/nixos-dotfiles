@@ -111,11 +111,9 @@ alacritty
 keepassxc
 btop
 fzf
-zoxide
 git
 neofetch
 xwallpaper
-pcmanfm
 rofi
 figlet
 neo-cowsay
@@ -124,6 +122,8 @@ peaclock
 gh --> github-cli
 ayugram-desktop
 Glide browser --> main browser
+dolphin
+vlc
 ```
 
 ---

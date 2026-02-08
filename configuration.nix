@@ -156,6 +156,7 @@
     inputs.glide.packages.${pkgs.system}.default
     steam
     prismlauncher
+    vlc
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
