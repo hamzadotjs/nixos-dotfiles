@@ -12,6 +12,11 @@
     ".local/state/helium/.keep".text = "";
     ".cache/helium/.keep".text = "";
     ".mozilla/glide/.keep".text = "";
+
+    #steam
+    ".steam/.keep".text = "";
+    ".local/share/Steam/.keep".text = "";
+    ".local/state/steam/.keep".text = "";  # Steam state too
   };
 
 

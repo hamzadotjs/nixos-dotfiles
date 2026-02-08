@@ -119,28 +119,32 @@ pcmanfm
 rofi
 figlet
 neo-cowsay
-qutebrowser --> secondary browser
+helium --> secondary browser
 peaclock
 gh --> github-cli
 ayugram-desktop
-Helium browser
+Glide browser --> main browser
 ```
 
 ---
 
-## User Packages & Configs:
-
-### User packages:
+### Commented packages:
 
 ```
-bat
+qutebrowser
+ungooogled chromium
+zoxide
+pcmanfm
+floorp
 ```
+## Configs
 
-## Shell:
 
-### * Bash
-### * Green PS1 prompt (\u@\h:\w$)
-### * neofetch runs on startup
+### Shell:
+
+#### * Bash
+#### * Green PS1 prompt (\u@\h:\w$)
+#### * neofetch runs on startup
 
 ### Aliases:
 

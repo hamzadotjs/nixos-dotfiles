@@ -85,6 +85,20 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
   nixpkgs.config.allowUnfree = true;
+
+  #steam fix
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+  };
+
+
+  # Steam with FHS + runtime fixes
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+  };
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.mark = {
     isNormalUser = true;
@@ -123,12 +137,13 @@
     btop
     # zsh
     fzf
-    zoxide
+    # zoxide
     git
     neofetch
     pulseaudio
     xwallpaper
-    pcmanfm
+    # pcmanfm
+    kdePackages.dolphin
     rofi
     figlet
     neo-cowsay
@@ -138,9 +153,9 @@
     gh
     ayugram-desktop
     (inputs.helium.defaultPackage.${pkgs.system})
-    # (inputs.glide.defaultPackage.${pkgs.system})
     inputs.glide.packages.${pkgs.system}.default
     steam
+    prismlauncher
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
