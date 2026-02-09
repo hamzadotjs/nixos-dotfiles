@@ -44,7 +44,7 @@
      enable = true;
      windowManager.qtile.enable = true;
      displayManager.sessionCommands = ''
-       xwallpaper --zoom ~/Pictures/wallpapers/Dynamic-Wallpapers/Dark/Beach-Dark.png
+       xwallpaper --zoom ~/walls/Nixos-beach.png
        xset r rate 200 35 &
        '';
      };
