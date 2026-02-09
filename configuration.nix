@@ -124,6 +124,9 @@
   #        glide-browser = nixpkgs-glide.glide-browser;
   #      }))
   #];
+
+  # MangoWC
+  
   # List packages installed in system profile.
   # You can use [https://search.nixos.org/](https://search.nixos.org/) to find more packages (and options).
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -145,18 +148,18 @@
     # pcmanfm
     kdePackages.dolphin
     rofi
-    figlet
-    neo-cowsay
     # ungoogled-chromium
     # qutebrowser
     peaclock
     gh
     ayugram-desktop
-    (inputs.helium.defaultPackage.${pkgs.system})
+    # (inputs.helium.defaultPackage.${pkgs.system})
     inputs.glide.packages.${pkgs.system}.default
     steam
     prismlauncher
     vlc
+    betterlockscreen
+    i3lock-color
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
